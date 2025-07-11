@@ -16,3 +16,32 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <nav className="navbar">
+      <div className="navbar-logo">Arjit Kulkarni</div>
+      <div
+        className={`navbar-hamburger${menuOpen ? ' open' : ''}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span />
+        <span />
+        <span />
+        <span />
+      </div>
+      <ul className={`navbar-links${menuOpen ? ' show' : ''}`}>
+        <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
+        <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
+        <li><a href="#education" onClick={() => setMenuOpen(false)}>Education</a></li>
+        <li><a href="#leadership" onClick={() => setMenuOpen(false)}>Leadership</a></li>
+        <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
+        <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+      </ul>
+    </nav>
+  );
+};
+
+export default Navbar;
