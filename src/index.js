@@ -26,6 +26,9 @@ const Navbar = () => {
       <div
         className={`navbar-hamburger${menuOpen ? ' open' : ''}`}
         onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation"
+        tabIndex={0}
+        onKeyPress={e => { if (e.key === 'Enter') setMenuOpen(!menuOpen); }}
       >
         <span />
         <span />
