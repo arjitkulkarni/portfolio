@@ -6,26 +6,98 @@
 
 .leadership h2 {
   text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
   letter-spacing: 1px;
 }
 
-.leadership-content {
-  max-width: 700px;
+.leadership-grid {
+  max-width: 1100px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.leadership-card {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(34,34,59,0.06);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(34,34,59,0.08);
   padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
 }
 
-.leadership-content h3 {
+.leadership-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(34,34,59,0.15);
+}
+
+.leadership-card.featured {
+  grid-column: 1 / -1;
+  border: 2px solid #667eea;
+  background: linear-gradient(135deg, #f8f9ff 0%, #fff 100%);
+}
+
+.leadership-card h3 {
   color: #4a4e69;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
 }
 
-.leadership-content ul {
-  padding-left: 1.2rem;
+.role-duration {
+  color: #9a8c98;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  background: #f2e9e4;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+}
+
+.leadership-achievements {
+  list-style: none;
+  padding-left: 0;
   margin: 0;
-} 
+}
+
+.leadership-achievements li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 1.8rem;
+}
+
+.leadership-achievements li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.leadership-achievements strong {
+  color: #4a4e69;
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .leadership {
+    padding: 3rem 1rem;
+  }
+  
+  .leadership h2 {
+    font-size: 2rem;
+  }
+  
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .leadership-card {
+    padding: 1.5rem;
+  }
+}

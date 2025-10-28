@@ -6,37 +6,107 @@
 
 .education h2 {
   text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
   letter-spacing: 1px;
 }
 
 .education-timeline {
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .education-item {
   background: #f2e9e4;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(34,34,59,0.06);
-  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(34,34,59,0.08);
+  padding: 2rem 2.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.education-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(34,34,59,0.15);
+}
+
+.education-item.featured {
+  border: 2px solid #667eea;
+  background: linear-gradient(135deg, #f8f9ff 0%, #f2e9e4 100%);
+}
+
+.education-header {
+  margin-bottom: 1.5rem;
 }
 
 .education-item h3 {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
+  color: #4a4e69;
+  font-size: 1.5rem;
+}
+
+.institution {
+  font-size: 1.1rem;
+  color: #22223b;
+  font-weight: 500;
+  margin: 0.3rem 0;
+}
+
+.duration {
+  display: inline-block;
+  font-size: 0.95rem;
+  color: #9a8c98;
+  background: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.education-highlights {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  list-style: none;
+}
+
+.education-highlights li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.education-highlights li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.education-highlights strong {
   color: #4a4e69;
 }
 
-.education-item span {
-  font-size: 0.95rem;
-  color: #9a8c98;
+/* Responsive design */
+@media (max-width: 768px) {
+  .education {
+    padding: 3rem 1rem;
+  }
+  
+  .education h2 {
+    font-size: 2rem;
+  }
+  
+  .education-item {
+    padding: 1.5rem;
+  }
+  
+  .education-item h3 {
+    font-size: 1.3rem;
+  }
 }
-
-.education-item ul {
-  margin-top: 0.5rem;
-  padding-left: 1.2rem;
-} 

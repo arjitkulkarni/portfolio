@@ -26,7 +26,7 @@ const Navbar = () => {
         <li><a href="#leadership" onClick={() => setMenuOpen(false)}>Leadership</a></li>
         <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
         <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
-        <li><a href="/Arjit_Kulkarni_Resume.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Resume</a></li>
+        <li><a href="https://drive.google.com/file/d/14_aBy3nJjnQZMGSJ2bICaHAxrUg8OGeP/view?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Resume</a></li>
       </ul>
     </nav>
   );
