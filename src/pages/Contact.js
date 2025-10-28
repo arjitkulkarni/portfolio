@@ -12,11 +12,11 @@ const Contact = () => (
         <button type="submit">Send</button>
       </form>
       <div className="contact-info">
-        <p>Email: <a href="mailto:arjitkulkarni21506@gmail.com">arjitkulkarni21506@gmail.com</a></p>
+        <p>Email: <a href="mailto:arjitkulkarni81018@gmail.com">arjitkulkarni81018@gmail.com</a></p>
         <p>Phone: <a href="tel:+919740371329">+91 9740371329</a></p>
         <div className="contact-links">
-          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/arjit-kulkarni-251238326/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/arjitkulkarni" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
     </div>
